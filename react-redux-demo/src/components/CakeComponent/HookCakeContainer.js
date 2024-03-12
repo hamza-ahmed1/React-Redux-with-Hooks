@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { buyCake } from '../redux/Cake/CakeAction';
 
 export default function HookCakeContainer() {
-    const no_of_cake=useSelector(state=>state.no_of_cake)
+    const no_of_cake=useSelector(state=>state.cake.no_of_cake)
     const dispatch=useDispatch();
   return (
     <>

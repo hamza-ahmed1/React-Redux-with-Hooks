@@ -2,7 +2,7 @@ import React from 'react'
 import { buyCake } from '../redux/Cake/CakeAction';
 import { connect } from 'react-redux'
   function CakeContainer(props) {
-    console.log(props);
+   // console.log(props);
   return (
    <div>
      <h1>Cake SHOP</h1>
@@ -16,7 +16,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps=state=>{
     return{
-        no_of_cake:state.no_of_cake
+        no_of_cake:state.cake.no_of_cake
     }
 }
 
