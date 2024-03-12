@@ -1,0 +1,32 @@
+--------Redux File Structure------
+indide src 
+        .Action(Folder)
+            ->index.js (main)
+
+        .reducer(Folder)
+         ->no of single reducer like inc,dec,add_to_cart
+         ->index.js (root reducer)
+
+         .Store.js (For store creation)
+            
+------Action----
+it tells us what to do not how to do
+------Reducers------
+it specify how the app state changes in response to action send to the store
+it takes action and state as argument and return new state
+each reducer represent specific task
+we have to register all the reducer inside a single reducer called root reducer
+-------Redux Store----
+1-import rootreducer
+2-import C from redux better to use toolkit
+3-create store
+4-export store
+
+store variable holds all states of your application
+we have only a single store in react app
+store bring together the state,action ,and reducer
+store is a object which provides the  state of application
+
+
+-------How to fetch state  from redux store------
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let p=new Promise(function (resolve,reject) {
+            let a=3;
+            document.write("Panding...");
+            setTimeout(()=>{
+
+                if(a==3)
+                {
+                    resolve("success");
+    
+                }
+                else{
+                    reject("reject");
+                }
+            },3000);
+        });
+        // console.log(p);
+
+        p.then((msg)=>{
+                document.write(msg);
+        });
+        p.catch((msg)=>{
+            document.write(msg);
+        })
+
+        let onfulfill=(msg)=>{
+            console.log(msg);
+        }
+        let onreject=(msg)=>{
+            console.log(msg);
+        }
+
+        // p.then(onfulfill).catch(onreject);
+
+        //Why we use Promises?
+        //The code which takes time we kept that code in promises:
+        //Promise has three states:
+        // 1-panding
+        // 2-fulfilled
+        // 3-rejected
+
+        // Async and Await
+        // used to make easy use of Promises
+        // async makes a function to return a Promise
+        
+        // async function my(){
+        //     return "Hello world";
+        // }
+        // console.log(my());
+
+        async function ex(){
+            console.log("ex 1");
+            await console.log("ex 2");
+            console.log("ex 3a");
+            console.log("ex 3b");
+
+        }
+        ex();
+        console.log("ex 4");
+        console.log("ex 5");
+
+    </script>
+</body>
+</html>
